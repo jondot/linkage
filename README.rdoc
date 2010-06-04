@@ -1,7 +1,20 @@
 = linkage
 
-Description goes here.
+Provides embed code to various media links.
+Is currently a chunk of Timewise, a collaborative planning tool.
 
+Essentially, you should provide youtube or Flickr media link, and it
+should know how to generate embed code for you without you caring about
+the type of link you're providing.
+
+As an example, a user can POST 10 kinds of links in a textarea and you
+should
+
+	text.each_line do |line|
+		Paracode::Media::Linkage.create(line).html
+	end
+	
+	
 == Note on Patches/Pull Requests
  
 * Fork the project.
@@ -14,4 +27,4 @@ Description goes here.
 
 == Copyright
 
-Copyright (c) 2010 jondot. See LICENSE for details.
+Copyright (c) 2010 Dotan Nahum (jondot). See LICENSE for details.
